@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Mini Library</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- KEEP RELATIVE PATHS LIKE THIS — your environment requires it -->
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Mini Library</h1>
+
+        <section class="card">
+            <h2>Add Book</h2>
+            <form id="add-book-form">
+                <input id="book-title" placeholder="Title" required />
+                <input id="book-author" placeholder="Author" required />
+                <input id="book-copies" placeholder="Copies (1)" type="number" min="1" value="1" />
+                <button type="submit">Add Book</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Register User</h2>
+            <form id="add-user-form">
+                <input id="user-name" placeholder="Name" required />
+                <input id="user-email" placeholder="Email (optional)" />
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Books</h2>
+            <div id="books-list">Loading books…</div>
+        </section>
+
+        <section class="card">
+            <h2>Issue / Return</h2>
+            <div class="row">
+                <select id="user-select">
+                    <option value="">Select user</option>
+                </select>
+                <select id="book-select">
+                    <option value="">Select book</option>
+                </select>
+                <button id="issue-btn">Issue</button>
+            </div>
+            <div style="margin-top:12px;">
+                <input id="return-issue-id" placeholder="Issue ID to return" />
+                <button id="return-btn">Return</button>
+            </div>
+            <h3 style="margin-top:12px;">Currently issued</h3>
+            <div id="issued-list">Loading…</div>
+        </section>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+/* style.css - very simple tidy UI */
+:root {
+    --bg: #f5f7fb;
+    --card: white;
+    --accent: #1f6feb;
+    --muted: #666;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: var(--bg);
+    margin: 0;
+    padding: 24px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 16px 0;
+    color: #0b2545;
+}
+
+.card {
+    background: var(--card);
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(14, 30, 60, 0.06);
+    margin-bottom: 12px;
+}
+
+input,
+select,
+button {
+    padding: 8px 10px;
+    margin: 6px 6px 0 0;
+    border-radius: 6px;
+    border: 1px solid #e3e7f0;
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#books-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#books-list th,
+#books-list td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #f0f3f8;
+    font-size: 14px;
+}
+
+.small-muted {
+    color: var(--muted);
+    font-size: 13px;
+}
